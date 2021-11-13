@@ -56,46 +56,166 @@
                         <a class="carousel-control-next header_slide_control_2" href="#myCarousel" data-slide="next">
                             <i class="fas fa-chevron-right"></i>
                         </a>
-                    </div> 
+                    </div>
                 </div>
             </div>
             <!-- end--navbar-top-- -->
             <!-- start-header-with-search--------->
             <div class="header_with_search">
-                <div class="grid wide header_with_search-main">
-                    <div class="header_search_left">
-                        <a href="#" class="header_search-logo">
-                            <img src="./assets/images/logo.jpg.crdownload" alt="logo">
-                        </a>
-                        <div class="header_search-adress">
-                            <span>Xem giá, khuyến mãi tại</span>
-                            <div class="header_search-adress_body">
-                                <span>P.Nguyễn Thái Hoàng</span>
-                                <i class="fas fa-sort-down"></i>
-                            </div>
-                        </div>
-                        <form action="" class="header_search">
+                <div class="grid wide ">
+                    <div class="header_with_search-main">
+                        <div class="header_search_left">
+                            <a href="#" class="header_search-logo">
+                                <img src="./assets/images/logo.jpg" alt="logo">
+                            </a>
+                            <label for="header_adress_checkbox" class="header_search-adress">
+                                <span class="header_search-adress-title">Xem giá, khuyến mãi tại</span>
+                                <div class="header_search-adress_body">
+                                    <span class="header_adress_body-title">
+                                        <h3>P.Nguyễn Thái Hoàng</h3>
+                                    </span>
+                                    <i class="fas fa-sort-down"></i>
+                                    <input type="checkbox" hidden id="header_adress_checkbox"
+                                        class="header_adress_checkbox">
+                                    <label class="header_adress_overlay">
 
-                        </form>
-                        <a href="#" class="header_cart">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span>Giỏ hàng</span>
-                        </a>
-                        <a href="#" class="header_cart-history">
-                            Lịch sử đơn hàng
-                        </a>
-                    </div>
-                    <div class="header_search_right">
-                        <a href="#" class="header_search_right-product">24h Công nghệ</a>
-                        <a href="#" class="header_search_right-product">Hỏi Đáp</a>
-                        <a href="#" class="header_search_right-product">Game App</a>
+                                    </label>
+                                    <form action="#" class="header_adress_form">
+                                        <div class="header_adress_form-header">
+                                            <h3>Chọn địa chỉ nhận hàng</h3>
+                                            <label for="header_adress_checkbox" class="header_adress_checkbox">
+                                                <i class="fas fa-times"></i>
+                                                <span>Đóng</span>
+                                            </label>
+                                        </div>
+                                        <div class="header_adress_form-body">
+                                            <div class="header_adress_nodetail">
+                                                <div class="header_adress_body_input">
+                                                    <span>Hồ Chí Minh</span>
+                                                    <i class="fas fa-sort-down"></i>
+                                                </div>
+                                                <span class="header_form_district">Quận: <span>1</span></span>
+                                                <span class="header_form_wards">Phường: <span>1</span></span>
+                                                <span class="header_form_input_detal">Chọn địa chỉ khác</span>
+                                            </div>
+                                            <button class="header_form_confilm">
+                                                Xác nhận
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </label>
+                            <form action="" class="header_search">
+                                <input type="text" placeholder="Bạn tìm gì...">
+                                <button><i class="fas fa-search"></i></button>
+                            </form>
+                            <a href="#" class="header_cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Giỏ hàng</span>
+                                <div class="header_cart-overlay"></div>
+                            </a>
+                            <a href="#" class="header_cart-history">
+                                Lịch sử đơn hàng
+                            </a>
+                        </div>
+                        <div class="header_search_right">
+                            <a href="#" class="header_search_right-product">24h <br> Công nghệ</a>
+                            <a href="#" class="header_search_right-product"><br>Hỏi Đáp</a>
+                            <a href="#" class="header_search_right-product"><br>Game App</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- end-header-with-search--------->
+            <!-- start-navbar-bottom----------------->
+            <div class="header_navbar_bottom grid wide">
+                <ul class="header_navbar_list">
+                    <li class="header_navbar_item">
+                        <a href="#" class="header_navbar_link"><i class="fas fa-phone"></i> Điện thoại</a>
+                    </li>
+                    <li class="header_navbar_item">
+                        <a href="#" class="header_navbar_link"><i class="fas fa-laptop"></i> Laptop</a>
+                    </li>
+                    <li class="header_navbar_item">
+                        <a href="#" class="header_navbar_link"><i class="fas fa-tablet-alt"></i> Tablet</a>
+                    </li>
+                    <li class="header_navbar_item">
+                        <a href="#" class="header_navbar_link"><i class="fas fa-headphones"></i> Phụ kiện <i
+                                class="fas fa-caret-down"></i></a>
+                        <!-- <div class="header_navbar_accessory">
+                            <div class="header_accessory-item-group">
+                                <h3>Phụ kiện di động</h3>
+                                <ul class="header_accessory_list">
+                                    <li class="header_accessory_item">
+                                        <a href="#" class="header_accessory_link">Pin sạc dự phòng</a>
+                                    </li>
+                                    <li class="header_accessory_item">
+                                        <a href="#" class="header_accessory_link">Cáp sạc</a>
+                                    </li>
+                                    <li class="header_accessory_item">
+                                        <a href="#" class="header_accessory_link">Màn hình</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header_accessory-item-group">
+                                <h3>Phụ kiện di động</h3>
+                                <ul class="header_accessory_list">
+                                    <li class="header_accessory_item">
+                                        <a href="#" class="header_accessory_link">Pin sạc dự phòng</a>
+                                    </li>
+                                    <li class="header_accessory_item">
+                                        <a href="#" class="header_accessory_link">Cáp sạc</a>
+                                    </li>
+                                    <li class="header_accessory_item">
+                                        <a href="#" class="header_accessory_link">Màn hình</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header_accessory-item-group">
+                                <h3>Phụ kiện di động</h3>
+                                <ul class="header_accessory_list">
+                                    <li class="header_accessory_item">
+                                        <a href="#" class="header_accessory_link">Pin sạc dự phòng</a>
+                                    </li>
+                                    <li class="header_accessory_item">
+                                        <a href="#" class="header_accessory_link">Cáp sạc</a>
+                                    </li>
+                                    <li class="header_accessory_item">
+                                        <a href="#" class="header_accessory_link">Màn hình</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </li>
+                    <li class="header_navbar_item">
+                        <a href="#" class="header_navbar_link"><i class="far fa-clock"></i> Đồng hồ thông minh</a>
+                    </li>
+                    <li class="header_navbar_item">
+                        <a href="#" class="header_navbar_link"><i class="far fa-clock"></i> Đồng hồ thông minh</a>
+                    </li>
+                    <li class="header_navbar_item">
+                        <a href="#" class="header_navbar_link"><i class="fas fa-desktop"></i> PC, Máy in <i
+                                class="fas fa-caret-down"></i></a>
+                    </li>
+                    <li class="header_navbar_item">
+                        <a href="#" class="header_navbar_link"> Máy cũ giá rẻ</a>
+                    </li>
+                    <li class="header_navbar_item">
+                        <a href="#" class="header_navbar_link"> Sim, thẻ cào</a>
+                        <span class="item_sale">Giảm 5%</span>
+                    </li>
+                    <li class="header_navbar_item">
+                        <a href="#" class="header_navbar_link"> Trả góp, điện nước</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- end navbar bottom--------------- -->
         </div>
         <!-- end--header-- -->
         <div class="content">
+            <div class="grid wide">
+                
+            </div>
 
         </div>
         <footer>
