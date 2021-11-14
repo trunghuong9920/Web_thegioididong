@@ -398,6 +398,18 @@
 .row_main_content{
     margin: 0;
 }
+
+.bar_list{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.bar_item{
+    margin-left: 12px;
+}
+.sub-banner{
+    display: block;
+}
 .content_group_event{
     background-image: var(--url-img-event-content);
     padding: 90px 12px 12px 12px;
@@ -552,7 +564,7 @@
     opacity: 0.1;
     width: 31px;
     height: 67px;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 .carousel-content-group i{
     font-size: 4.0rem;
