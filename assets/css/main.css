@@ -461,7 +461,6 @@
     position: relative;
     border: 1px solid var(--border-color);
     background-color: var(--background-color);
-
 }
 .group_item:hover{
     text-decoration: none;
