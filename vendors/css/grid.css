@@ -304,6 +304,7 @@
     .l-1,
     .l-2,
     .l-2-4,
+    .l-8-4,
     .l-3,
     .l-4,
     .l-5,
@@ -330,6 +331,10 @@
     .l-2-4 {
         flex: 0 0 20%;
         max-width: 20%;
+    }
+    .l-8-4 {
+        flex: 0 0 80%;
+        max-width: 80%;
     }
 
     .l-3 {
@@ -467,6 +472,7 @@
     .wide .l-1,
     .wide .l-2,
     .wide .l-2-4,
+    .wide .l-8-4,
     .wide .l-3,
     .wide .l-4,
     .wide .l-5,
@@ -494,7 +500,10 @@
         flex: 0 0 20%;
         max-width: 20%;
     }
-
+    .wide .l-8-4 {
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
     .wide .l-3 {
         flex: 0 0 25%;
         max-width: 25%;
