@@ -398,6 +398,12 @@
 .row_main_content{
     margin: 0;
 }
+.content_group_event{
+    background-image: var(--url-img-event-content);
+    padding: 90px 12px 12px 12px;
+
+}
+
 .content{
     margin: 12px 0;
 }
@@ -442,6 +448,8 @@
     text-decoration: none;
     position: relative;
     border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+
 }
 .group_item:hover{
     text-decoration: none;
