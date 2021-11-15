@@ -49,6 +49,9 @@
     height: var(--header_with_search-height);
     margin-right: 4px;
 }
+.logo_on_mobile{
+    display: none;
+}
 .header_search-adress{
     width: 133px;
     padding: 4px 12px;
@@ -376,6 +379,81 @@
     text-decoration: none;
     color: var(--primary-color);
 }
+/* menu_on_mobile */
+.menu_list_on_mobile{
+    display: none;
+    color: white;
+    margin-left: 12px;
+    margin-top: 10px;
+}
+.menu_list_on_mobile i{
+    display: block;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.check_menu_list_on_mobile:checked ~ .menu_option_list_on_mobile{
+    transform: translateY(0%);
+    opacity: 1;
+}
+.menu_option_list_on_mobile{
+    position: fixed;
+    top:  0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    z-index: 15;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform linear .3s;
+}
+.menu_list_close{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid var(--border-color);
+}
+.menu_list_close-icon{
+    display: block;
+    float: right;
+    padding: 6px;
+    margin: 6px 6px 0 0;
+    border: 1px solid var(--border-color);
+}
+
+.meunu_list_list{
+    padding: 0;
+    list-style: none;
+    column-count: 5;
+    margin: 12px;    
+}
+.menu_list_item{
+    padding: 4px 0;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+.menu_list_item a{
+    text-decoration: none;
+    color: var(--text-color-first);
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_body_list{
+    padding: 12px;
+    column-count: 2;
+    list-style: none;
+}
+.menu_list_body_item a{
+    text-decoration: none;
+    color: var(--text-color-first);
+    padding: 4px 0;
+    margin: 4px 0;
+    display: block;
+    border-bottom: 1px solid var(--text-color-first);
+}
 .header_search_right{
     display: flex;
     align-items: center;
@@ -515,6 +593,9 @@
 }
 .sub-banner{
     display: block;
+}
+.sub-banner img{
+    width: 100%;
 }
 .content_group_event{
     background-image: var(--url-img-event-content);

@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./vendors/css/grid.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
 <body>
@@ -40,12 +41,12 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active header_slide_1">
                             <div class="grid wide">
-                                <img src="./assets/images/header_navbar_top_1.png" alt="Photos">
+                                <img src="./assets/images/header_navbar_top_1.png" width="100%" alt="Photos">
                             </div>
                         </div>
                         <div class="carousel-item header_slide_2">
                             <div class="grid wide">
-                                <img src="./assets/images/2011-1200-44-1200x44.png" alt="Photos">
+                                <img src="./assets/images/2011-1200-44-1200x44.png" width="100%" alt="Photos">
                             </div>
                         </div>
                     </div>
@@ -66,10 +67,11 @@
                     <div class="header_with_search-main">
                         <div class="header_search_left">
                             <a href="#" class="header_search-logo">
-                                <img src="./assets/images/logo.jpg" alt="logo">
+                                <img class="hidden_on_mobile" src="./assets/images/logo.jpg" alt="logo">
+                                <img class="show_on_mobile logo_on_mobile" src="./assets/images/logo_mobile.png" alt="logo">
                             </a>
-                            <label for="header_adress_checkbox" class="header_search-adress">
-                                <span class="header_search-adress-title">Xem giá, khuyến mãi tại</span>
+                            <label for="header_adress_checkbox" class=" header_search-adress">
+                                <span class="hidden_on_mobile header_search-adress-title">Xem giá, khuyến mãi tại</span>
                                 <div class="header_search-adress_body">
                                     <span class="header_adress_body-title">
                                         <h3>P.Nguyễn Thái Hoàng</h3>
@@ -281,14 +283,111 @@
                             </form>
                             <a href="#" class="header_cart">
                                 <i class="fas fa-shopping-cart"></i>
-                                <span>Giỏ hàng</span>
+                                <span class="hidden_on_mobile">Giỏ hàng</span>
                                 <div class="header_cart-overlay"></div>
                             </a>
-                            <a href="#" class="header_cart-history">
+                            <a href="#" class=" header_cart-history">
                                 Lịch sử đơn hàng
                             </a>
+                            <label for="check_menu_list_on_mobile" class="menu_list_on_mobile">
+                                <i class="fas fa-bars"></i>
+                                <Span>Menu</Span>
+                            </label>
+                            <input type="checkbox" hidden id="check_menu_list_on_mobile" class="check_menu_list_on_mobile">
+                            <div class="menu_option_list_on_mobile">
+                                <div class="menu_list_close">
+                                    <label for="check_menu_list_on_mobile" class="menu_list_close-icon">
+                                        <i class="fas fa-times"></i>
+                                        <span>Đóng</span>
+                                    </label>
+                                </div>
+                                <div class="menu_list_header">
+                                    <ul class="meunu_list_list">
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+                                        <li class="menu_list_item">
+                                            <a href="#" class="menu_list_link">Đồng Hồ</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="menu_list_body">
+                                    <ul class="menu_body_list">
+                                        <li class="menu_list_body_item">
+                                            <span><strong>Nhóm hàng mới</strong></span>
+                                        </li>
+                                        <li class="menu_list_body_item">
+                                            <a href="#" class="menu_list_body_link">Phụ kiện ô tô</a>
+                                        </li>
+                                        <li class="menu_list_body_item">
+                                            <a href="#" class="menu_list_body_link">Phụ kiện ô tô</a>
+                                        </li>
+                                        <li class="menu_list_body_item">
+                                            <a href="#" class="menu_list_body_link">Phụ kiện ô tô</a>
+                                        </li>
+                                        <li class="menu_list_body_item">
+                                            <a href="#" class="menu_list_body_link">Phụ kiện ô tô</a>
+                                        </li>
+                                        <li class="menu_list_body_item">
+                                            <span><strong>Nhóm hàng mới</strong></span>
+                                        </li>
+                                        <li class="menu_list_body_item">
+                                            <a href="#" class="menu_list_body_link">Phụ kiện ô tô</a>
+                                        </li>
+                                        <li class="menu_list_body_item">
+                                            <a href="#" class="menu_list_body_link">Phụ kiện ô tô</a>
+                                        </li>
+                                        <li class="menu_list_body_item">
+                                            <a href="#" class="menu_list_body_link">Phụ kiện ô tô</a>
+                                        </li>
+                                        <li class="menu_list_body_item">
+                                            <a href="#" class="menu_list_body_link">Phụ kiện ô tô</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="header_search_right">
+                        <div class="hidden_on_mobile header_search_right">
                             <a href="#" class="header_search_right-product">24h <br> Công nghệ</a>
                             <a href="#" class="header_search_right-product"><br>Hỏi Đáp</a>
                             <a href="#" class="header_search_right-product"><br>Game App</a>
@@ -298,7 +397,7 @@
             </div>
             <!-- end-header-with-search--------->
             <!-- start-navbar-bottom----------------->
-            <div class="header_navbar_bottom grid wide">
+            <div class="hidden_on_mobile header_navbar_bottom grid wide">
                 <ul class="header_navbar_list">
                     <li class="header_navbar_item">
                         <a href="#" class="header_navbar_link"><i class="fas fa-phone"></i> Điện thoại</a>
@@ -399,10 +498,10 @@
             <!-- end navbar bottom--------------- -->
         </div>
         <!-- sticky_slidebar-- -->
-        <a href="#" class="sticky_sidebar_left">
+        <a href="#" class="hidden_on_mobile sticky_sidebar_left">
             <img src="./assets/images/TraiTGDD-79x271.png" alt="Photos">
         </a>
-        <a href="#" class="sticky_sidebar_right">
+        <a href="#" class="hidden_on_mobile sticky_sidebar_right">
             <img src="./assets/images/PhaiTGDD-79x271.png" alt="Photos">
         </a>
         <!-- end--header-- -->
@@ -411,9 +510,8 @@
                 <!-- start-bar-top-- -->
                 <div class="bartop">
                     <div class="row">
-                        <div class="col l-8 ">
+                        <div class="col l-8 c-12">
                             <div id="carousel_bartop" class="carousel slide carousel_bartop" data-ride="carousel">
-
                                 <!-- The slideshow -->
                                 <div class="carousel-inner">
                                     <div class="carousel-item active carousel_bartop_item">
@@ -460,7 +558,7 @@
                             </div>
 
                         </div>
-                        <div class="col l-4">
+                        <div class="col l-4 c-0 ">
                             <div class="row">
                                 <ul class="bar_list">
                                     <li class="bar_item">
