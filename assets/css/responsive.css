@@ -26,6 +26,8 @@
         --header-height:55px;
         --header_navbar_top-height:15px;
         --header_with_search-height:40px;
+        --header_logo_width-img:40px;
+        --header_width_menubar:28px;
     }
     .content{
         margin: 0;
@@ -42,19 +44,22 @@
         font-size: 1.0rem;
     }
     .header_search-logo img{
-        width: 40px;
+        width: var(--header_logo_width-img);
     }
     .header_search-logo{
         margin-right: 0;
     }
     .header_search-adress{
-        width: 70px;
-        padding: 2px 0px;
+        width: 75px;
+        padding: 4px 0px;
         margin: 4px 4px;
         border: none;
     }
+    .header_search-adress_body{
+        margin-top: 4px;
+    }
     .header_adress_body-title h3{
-        font-size: 1.0rem;
+        font-size: 1.1rem;
     }
     .header_adress_form {
         width: 100%;
@@ -63,14 +68,15 @@
         margin: 0;
     }
     .adress_icon_location{
-        display: block;
+        display: inline-block;
+        font-size: 0.8rem;
     }
     .header_adress_body-title{
-        max-height: 3.6rem;
+        max-height: 2.6rem;
         overflow: hidden;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
     }
     .header_search {
         width: 120px;
@@ -82,14 +88,63 @@
     .menu_list_on_mobile{
         display: block;
     }
-    
-
+    .show_on_mobile{
+        display: block;
+    }
+    .header_search_left{
+        width: 100%;
+    }
+    /*end header  */
     /* content--- */
+    .content{
+        margin: 0 12px;
+    }
     /* bar_top */
     .carousel_bartop_item a img{
         height: auto;
     }
 
+    /* content main */
+    .content_group-title{
+        display: block;
+    }
+    .content_group-title h1{
+        font-size: 1.8rem;
+        margin-left: 12px;
+    }
+    .group_item-body_tag{
+        display: none;
+    }
+    .group_item_review{
+        display: none;
+    }
+    .installment{
+        display: none;
+    }
+    .group_item-img{
+        margin-top: 20px;
+    }
+    /* product_on_moible */
+    .product_on_mobile{
+        display: block;
+    }
+
+    /* dialog_chat */
+    .dialog_chat{
+        position: fixed;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+    }
+    .dialog_close{
+        border-radius: 0px;
+    }
+    .dialog_body {
+        height: 100%;
+    }
 
 }
 
@@ -98,4 +153,50 @@
     .hidden_on_mobile{
         display: none;
     }
+    .header_cart-history{
+        font-size: 0.9rem;
+        padding: 2px;
+        width: 50px;
+        margin-top: 10px;
+        margin-left: 4px;
+        border-left: 1px solid var(--border-item_header-color);
+    }
+    .header_adress_body-title h3{
+        font-size: 0.9rem;
+    }
+    .header_adress_body-title h3 i{
+        font-size: 0.7rem;
+    }
+    .header_adress_body-title{
+        max-height: 3.6rem;
+        -webkit-line-clamp: 3;
+    }
+    .header_cart{
+        padding: 0 22px 0 12px;
+        margin: 0 4px;
+    }
+    .header_search-adress, .header_search-adress_body{
+        width: 47px;
+        margin-top: 0;
+    }
+    .menu_list_on_mobile{
+        margin: 4px;
+    }
+    .header_search input{
+        margin:  0 4px;
+    }
+    .header_form_confilm{
+        padding: 6px 110px;
+        font-size: 1.2rem;
+    }
+    .header_adress_body_input, .header_adress_detail_input_province, .header_adress_detail_input_district, .header_adress_detail_input_ward, .header_adress_detail_input_apartment_number {
+        padding: 4px;
+    }
+    .header_adress_body_showprovince_search, .header_adress_detail_body_showprovince_search, .header_adress_detail_body_showdistrict_search, .header_adress_detail_body_showward_search{
+        height: 35px;
+    }
+    .header_adress_detail_input_apartment_number{
+        font-size: 1.2rem;
+    }
+    /* end header----------- */
 }

@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="./vendors/css/grid.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <script src="./assets/js/main.js"></script>
 </head>
 
 <body>
@@ -70,12 +71,12 @@
                                 <img class="hidden_on_mobile" src="./assets/images/logo.jpg" alt="logo">
                                 <img class="show_on_mobile logo_on_mobile" src="./assets/images/logo_mobile.png" alt="logo">
                             </a>
-                            <label for="header_adress_checkbox" class=" header_search-adress">
+                            <label for="header_adress_checkbox" class=" header_search-adress" id="header_search-adress">
                                 <span class="hidden_on_mobile header_search-adress-title">Xem giá, khuyến mãi tại</span>
                                 <div class="header_search-adress_body">
                                     <span class="header_adress_body-title">
-                                        <i class="adress_icon_location fas fa-map-marker-alt"></i>
-                                        <h3> P.Nguyễn Thái Hoàng</h3>
+                                        <h3>  <i class="adress_icon_location fas fa-map-marker-alt"></i>
+                                        P.Nguyễn Thái Hoàng hà nội</h3>
                                     </span>
                                     <i class="hidden_on_mobile fas fa-sort-down"></i>
                                 </div>
@@ -278,19 +279,22 @@
                                     </button>
                                 </div>
                             </form>
+                          
                             <form action="" class="header_search">
-                                <input type="text" placeholder="Bạn tìm gì...">
+                                <input class="show_on_mobile" onclick="search_on_mobile()" type="text" placeholder="Bạn tìm gì...">
+                                <input class="hidden_on_mobile" type="text" placeholder="Bạn tìm gì...">
                                 <button><i class="fas fa-search"></i></button>
                             </form>
-                            <a href="#" class="header_cart">
+
+                            <a href="#" class="header_cart" id="header_cart">
                                 <i class="fas fa-shopping-cart"></i>
                                 <span class="hidden_on_mobile">Giỏ hàng</span>
                                 <div class="header_cart-overlay"></div>
                             </a>
-                            <a href="#" class=" header_cart-history">
+                            <a href="#" class=" header_cart-history" id="header_cart-history">
                                 Lịch sử đơn hàng
                             </a>
-                            <label for="check_menu_list_on_mobile" class="menu_list_on_mobile">
+                            <label onclick="show_tab_on_mobile()" for="check_menu_list_on_mobile" class="menu_list_on_mobile" id="menu_list_on_mobile">
                                 <i class="fas fa-bars"></i>
                                 <Span>Menu</Span>
                             </label>
@@ -597,6 +601,42 @@
                     </div>
 
                 </div>
+
+                <!-- list product on mobile -->
+                <div class="product_on_mobile">
+                    <ul class="product_on_mobile_list">
+                        <li class="product_on_mobile_item">
+                            <a href="#" class="product_on_mobile_link">Điện thoại</a>
+                        </li>
+                        <li class="product_on_mobile_item">
+                            <a href="#" class="product_on_mobile_link">Laptop</a>
+                        </li>
+                        <li class="product_on_mobile_item">
+                            <a href="#" class="product_on_mobile_link">Điện thoại</a>
+                        </li>
+                        <li class="product_on_mobile_item">
+                            <a href="#" class="product_on_mobile_link">Laptop</a>
+                        </li>
+                        <li class="product_on_mobile_item">
+                            <a href="#" class="product_on_mobile_link">Điện thoại</a>
+                        </li>
+                        <li class="product_on_mobile_item">
+                            <a href="#" class="product_on_mobile_link">Laptop</a>
+                        </li>
+                        <li class="product_on_mobile_item">
+                            <a href="#" class="product_on_mobile_link">Điện thoại</a>
+                        </li>
+                        <li class="product_on_mobile_item">
+                            <a href="#" class="product_on_mobile_link">Laptop</a>
+                        </li>
+                        <li class="product_on_mobile_item">
+                            <a href="#" class="product_on_mobile_link">Điện thoại</a>
+                        </li>
+                        <li class="product_on_mobile_item">
+                            <a href="#" class="product_on_mobile_link">Laptop</a>
+                        </li>
+                    </ul>
+                </div>
                 <!-- baner-- -->
                 <a href="#" class="sub-banner">
                     <img src="./assets/images/1200-44-1200x44-3.png" alt="banner">
@@ -607,7 +647,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row content_group-body">
-                                    <div class="col l-2-4 ">
+                                    <div class="col l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -650,7 +690,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col l-2-4 ">
+                                    <div class="col l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -693,7 +733,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col l-2-4 ">
+                                    <div class="col l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -736,7 +776,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col l-2-4 ">
+                                    <div class="col l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -779,227 +819,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col  l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-
-                                <div class="row content_group-body">
-                                    <div class="col l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col  l-2-4 ">
+                                    <div class="col  l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -1047,7 +867,7 @@
                             <div class="carousel-item">
 
                                 <div class="row content_group-body">
-                                    <div class="col l-2-4 ">
+                                    <div class="col l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -1090,7 +910,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col l-2-4 ">
+                                    <div class="col l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -1133,7 +953,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col l-2-4 ">
+                                    <div class="col l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -1176,7 +996,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col l-2-4 ">
+                                    <div class="col l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -1219,7 +1039,227 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col  l-2-4 ">
+                                    <div class="col  l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+
+                                <div class="row content_group-body">
+                                    <div class="col l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col  l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -1300,7 +1340,7 @@
                         </ul>
                     </div>
                     <div class="row row_main_content content_group-body">
-                        <div class="col col_main_content l-2-4 ">
+                        <div class="col col_main_content l-2-4 c-4 c-4">
                             <a href="#" class="group_item">
                                 <span class="installment">Trả góp 0%</span>
                                 <img class="group_item-img"
@@ -1342,7 +1382,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col col_main_content l-2-4 ">
+                        <div class="col col_main_content l-2-4 c-4 c-4">
                             <a href="#" class="group_item">
                                 <span class="installment">Trả góp 0%</span>
                                 <img class="group_item-img"
@@ -1384,7 +1424,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col col_main_content l-2-4 ">
+                        <div class="col col_main_content l-2-4 c-4 c-4">
                             <a href="#" class="group_item">
                                 <span class="installment">Trả góp 0%</span>
                                 <img class="group_item-img"
@@ -1426,7 +1466,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col col_main_content l-2-4 ">
+                        <div class="col col_main_content l-2-4 c-4 c-4">
                             <a href="#" class="group_item">
                                 <span class="installment">Trả góp 0%</span>
                                 <img class="group_item-img"
@@ -1468,7 +1508,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col col_main_content l-2-4 ">
+                        <div class="col col_main_content l-2-4 c-4 c-4">
                             <a href="#" class="group_item">
                                 <span class="installment">Trả góp 0%</span>
                                 <img class="group_item-img"
@@ -1512,7 +1552,7 @@
                         </div>
                     </div>
                     <div class="row row_main_content content_group-body">
-                        <div class="col col_main_content l-2-4 ">
+                        <div class="col col_main_content l-2-4 c-4 c-4">
                             <a href="#" class="group_item">
                                 <span class="installment">Trả góp 0%</span>
                                 <img class="group_item-img"
@@ -1554,7 +1594,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col col_main_content l-2-4 ">
+                        <div class="col col_main_content l-2-4 c-4 c-4">
                             <a href="#" class="group_item">
                                 <span class="installment">Trả góp 0%</span>
                                 <img class="group_item-img"
@@ -1596,7 +1636,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col col_main_content l-2-4 ">
+                        <div class="col col_main_content l-2-4 c-4 c-4">
                             <a href="#" class="group_item">
                                 <span class="installment">Trả góp 0%</span>
                                 <img class="group_item-img"
@@ -1638,7 +1678,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col col_main_content l-2-4 ">
+                        <div class="col col_main_content l-2-4 c-4 c-4">
                             <a href="#" class="group_item">
                                 <span class="installment">Trả góp 0%</span>
                                 <img class="group_item-img"
@@ -1680,7 +1720,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col col_main_content l-2-4 ">
+                        <div class="col col_main_content l-2-4 c-4 c-4">
                             <a href="#" class="group_item">
                                 <span class="installment">Trả góp 0%</span>
                                 <img class="group_item-img"
@@ -1750,7 +1790,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row row_main_content content_group-body">
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -1793,7 +1833,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -1836,7 +1876,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -1879,7 +1919,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -1922,226 +1962,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row row_main_content content_group-body">
-                                    <div class="col col_main_content l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col col_main_content l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col col_main_content l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col col_main_content l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2188,7 +2009,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="row row_main_content content_group-body">
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2231,7 +2052,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2274,7 +2095,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2317,7 +2138,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2360,7 +2181,226 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row row_main_content content_group-body">
+                                    <div class="col col_main_content l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col col_main_content l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col col_main_content l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col col_main_content l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2444,7 +2484,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row row_main_content content_group-body">
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2487,7 +2527,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2530,7 +2570,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2573,7 +2613,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2616,226 +2656,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row row_main_content content_group-body">
-                                    <div class="col col_main_content l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col col_main_content l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col col_main_content l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col col_main_content l-2-4 ">
-                                        <a href="#" class="group_item">
-                                            <span class="installment">Trả góp 0%</span>
-                                            <img class="group_item-img"
-                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
-                                                alt="Photos">
-                                            <div class="group_item-body">
-                                                <span class="group_item_event-sale">11.11 siêu sale</span>
-                                                <h3 class="group_item-body_name">
-                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
-                                                    đẹp, hàng chính hãng
-                                                </h3>
-                                                <ul class="group_item-body_tag">
-                                                    <li><span>Ram 8 GB</span></li>
-                                                    <li><span>SSD 256 GB</span></li>
-                                                </ul>
-                                                <p class="item_txt_online">Online giá rẻ</p>
-                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
-                                                <span class="group_item_total_sale">20%</span>
-                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
-                                                <ul class="group_item_review">
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="group_item_star">
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                    </li>
-                                                    <li class="group_item_number_overrate">
-                                                        <p>40</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2882,7 +2703,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="row row_main_content content_group-body">
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2925,7 +2746,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -2968,7 +2789,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -3011,7 +2832,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -3054,7 +2875,226 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col col_main_content l-2-4 ">
+                                    <div class="col col_main_content l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row row_main_content content_group-body">
+                                    <div class="col col_main_content l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col col_main_content l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col col_main_content l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col col_main_content l-2-4 c-4 ">
+                                        <a href="#" class="group_item">
+                                            <span class="installment">Trả góp 0%</span>
+                                            <img class="group_item-img"
+                                                src="./assets/images/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+                                                alt="Photos">
+                                            <div class="group_item-body">
+                                                <span class="group_item_event-sale">11.11 siêu sale</span>
+                                                <h3 class="group_item-body_name">
+                                                    Acer Nitro 5 Gaming AN515 57 727J i7 11800H (NH.QD9SV.005.) Giá siêu
+                                                    đẹp, hàng chính hãng
+                                                </h3>
+                                                <ul class="group_item-body_tag">
+                                                    <li><span>Ram 8 GB</span></li>
+                                                    <li><span>SSD 256 GB</span></li>
+                                                </ul>
+                                                <p class="item_txt_online">Online giá rẻ</p>
+                                                <span class="group_item_total_price"><strike>20.000000đ</strike></span>
+                                                <span class="group_item_total_sale">20%</span>
+                                                <span class="group_item_price"><strong>17.000000</strong>đ</span>
+                                                <ul class="group_item_review">
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                    <li class="group_item_star">
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </li>
+                                                    <li class="group_item_number_overrate">
+                                                        <p>40</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col col_main_content l-2-4 c-4 ">
                                         <a href="#" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
                                             <img class="group_item-img"
@@ -3116,7 +3156,7 @@
 
                 <div class="content_clock">
                     <div class="row">
-                        <div class="col l-2-4">
+                        <div class="col l-2-4 c-4">
                             <a href="#" class="content_clock_left"><img src="./assets/images/clock.png"
                                     alt="Photos"></a>
                         </div>
