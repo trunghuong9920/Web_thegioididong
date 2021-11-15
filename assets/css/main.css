@@ -881,6 +881,9 @@
 }
 .clock_right_tab_list li a{
     font-size: 1.4rem;
+    text-decoration: none;
+    text-align: center;
+    display: block;
 }
 .tab-pane{
     padding: 0;

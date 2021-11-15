@@ -204,11 +204,13 @@
         display: block;
         text-align: center;
         color: var(--background-color);
-        padding: 2px 0;
+        padding: 2px 4px;
         margin: 4px;
     }
-    .show_all_item_clock:hover{
+    .show_all_item_clock a:hover{
         text-decoration: none;
+        color: royalblue;
+
     }
     .tab_clock_content{
         padding-left: 12px;
