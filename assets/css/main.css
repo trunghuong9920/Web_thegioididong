@@ -328,6 +328,9 @@
 .show_on_mobile{
     display: none;
 }
+.show_on_mobile_flex{
+    display: flex;
+}
 .header_search button{
     background-color: white;
     border-radius: 4px;
@@ -644,10 +647,14 @@
     width: 100%;
 }
 .content_group_event{
-    background-image: var(--url-img-event-content);
-    padding: 90px 12px 12px 12px;
-
+    /* background-image: var(--url-img-event-content); */
+    padding: 20px 1px 12px 1px;
+    background-color: #fed100;
 }
+.content_group_event h1{
+    margin-bottom: 22px;
+}
+
 
 .content{
     margin: 12px 0;
@@ -658,12 +665,13 @@
 .content_group-title{
     display: flex;
     justify-content: space-between;
-    margin: 0 0 12px 0;
+    margin: 0  0 12px 0;
 }
 .content_group-title h1{
     font-size: 2.4rem;
     font-weight: 600;
     color: var(--text-color-first);
+    margin-bottom: 12px;
 }
 .content_group-title ul{
     display: flex;
@@ -671,19 +679,27 @@
     padding: 0;
     align-items: center;
     list-style: none;
+    overflow-x: auto;
+
+}
+.content_group-title ul::-webkit-scrollbar{
+    display: none;
 }
 
 .content_group-title ul li a:hover {
     color: rgb(99, 92, 179);
 }
+.content_group-title ul li{
+    display: block;
+    border: 1px solid var(--border-color);
+    padding: 4px 12px;
+    margin: 0 4px;
+    border-radius: 12px;
+
+}
 .content_group-title ul li a{
     text-decoration: none;
-    padding: 6px 12px;
-    margin: 0 8px;
     font-size: 1.2rem;
-    line-height: 1.2rem;
-    border-radius: 15px;
-    border: 1px solid var(--border-color);
     color: var(--text-color-first);
 }
 
@@ -714,7 +730,7 @@
     justify-content: center;
     margin: 48px auto 0 auto;
     height: auto;
-    max-height: 120px;
+    min-height: 200px;
 }
 .group_item:hover .group_item-img{
     transform: translateY(-10px);
@@ -794,6 +810,23 @@
 }
 .group_item_number_overrate p {
     font-size: 1.2rem;
+}
+.show_all_item{
+    margin: 12px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.show_all_item a{
+    padding: 4px 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color-first);
+
+}
+.show_all_item a:hover{ 
+    text-decoration: none;
+    color: var(--text-color-first);
 }
 /* carousel-content-item */
 .carousel-content-group{
