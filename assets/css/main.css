@@ -29,7 +29,9 @@
 .header_slide_control_2{
     right: 70px;
 }
-
+.ul_carousel_bartop{
+    display: none;
+}
 /* ---header_navbar_with_seach_---------------------- */
 .header_with_search{
     height: var(--header_with_search-height);

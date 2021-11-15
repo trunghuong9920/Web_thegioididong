@@ -146,6 +146,13 @@
         height: 100%;
     }
 
+    /* carousel */
+    .carousel-content-group{
+        display: none;
+    }
+    .ul_carousel_bartop{
+        display: flex;
+    }
 }
 
 /*Small phones from 0 to 480px*/
