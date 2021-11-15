@@ -35,6 +35,10 @@ function tab_clock_3(){
     document.getElementById("tab_2_m").style.display = 'none';
 
     document.getElementById("tab_4_m").style.display = 'none';
+
+    document.getElementById("tab_list_2_m").style.background = 'white';
+
+    
 }
 function tab_clock_4(){
     document.getElementById("tab_4_m").style.display = 'block';
