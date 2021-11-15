@@ -9,3 +9,38 @@ function show_tab_on_mobile(){
     document.getElementById("header_cart").style.display = 'block';
     document.getElementById("header_cart-history").style.display = 'block';
 }
+
+// tab_clock
+function tab_clock_1(){
+    document.getElementById("tab_1_m").style.display = 'block';
+    document.getElementById("tab_2_m").style.display = 'none';
+
+    document.getElementById("tab_3_m").style.display = 'none';
+
+    document.getElementById("tab_4_m").style.display = 'none';
+
+}
+function tab_clock_2(){
+    document.getElementById("tab_2_m").style.display = 'block';
+    document.getElementById("tab_1_m").style.display = 'none';
+
+    document.getElementById("tab_3_m").style.display = 'none';
+
+    document.getElementById("tab_4_m").style.display = 'none';
+}
+function tab_clock_3(){
+    document.getElementById("tab_3_m").style.display = 'block';
+    document.getElementById("tab_1_m").style.display = 'none';
+
+    document.getElementById("tab_2_m").style.display = 'none';
+
+    document.getElementById("tab_4_m").style.display = 'none';
+}
+function tab_clock_4(){
+    document.getElementById("tab_4_m").style.display = 'block';
+    document.getElementById("tab_3_m").style.display = 'none';
+
+    document.getElementById("tab_2_m").style.display = 'none';
+
+    document.getElementById("tab_1_m").style.display = 'none';
+}
