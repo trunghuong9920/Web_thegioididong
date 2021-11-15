@@ -11,10 +11,10 @@
     height: var(--header_navbar_top-height);
 }
 .header_slide_1{
-    background-color: #ffef3a;
+    background-color: var(--carousel-header-top-1-color);
 }
 .header_slide_2{
-    background-color: #FCDC66;
+    background-color: var(--carousel-header-top-2-color);
 }
 .header_slide_control_1 i ,.header_slide_control_2 i{
     color: var(--text-color-first);
@@ -109,8 +109,8 @@
     border: 1px solid var(--border-item_header-color);
     border-radius: 5px;
     z-index: 11;
-    margin-left: 10%;
-    margin-top: 10%;
+    margin-left: 25%;
+    margin-top: 30%;
     cursor: default;
     display: none;
 }
@@ -149,10 +149,94 @@
     padding: 20px;
 }
 .header_adress_nodetail{
+    position: relative;
     padding: 0 12px;
     padding-bottom: 20px;
+    display: block;
 }
-.header_adress_body_input{
+.header_adress_detail{
+    position: relative;
+    padding: 0 12px;
+    padding-bottom: 20px;
+    display: none;
+}
+.checkbox_header_form_input_detal:checked ~ .header_adress_nodetail{
+    display: none;
+}
+.checkbox_header_form_input_detal:checked ~ .header_adress_detail{
+    display: block;
+}
+/* show district */
+.header_adress_body_showprovince,.header_adress_detail_body_showprovince,.header_adress_detail_body_showdistrict,.header_adress_detail_body_showward{
+    position: absolute;
+    z-index: 12;
+    background-color: var(--background-color);
+    top: 45px;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    left: 0;
+    padding: 12px;
+    border-radius: 4px;
+    max-height: 250px;
+    overflow-y: scroll;
+    display: none;
+    
+}
+.header_adress_detail_body_showprovince{
+    
+    top: 80px;
+ 
+}
+.header_adress_detail_body_showdistrict{
+    top: 130px;
+}
+.header_adress_detail_body_showward{
+    top: 180px;
+}
+.checkbox_header_adress_body_input:checked ~ .header_adress_body_showprovince{
+    display: block;
+}
+.checkbox_header_adress_detail_input_province:checked ~ .header_adress_detail_body_showprovince{
+    display: block;
+}
+.checkbox_header_adress_detail_input_district:checked ~ .header_adress_detail_body_showdistrict{
+    display: block;
+}
+.checkbox_header_adress_detail_input_ward:checked ~ .header_adress_detail_body_showward{
+    display: block;
+}
+.header_adress_body_showprovince_search,.header_adress_detail_body_showprovince_search,.header_adress_detail_body_showdistrict_search, .header_adress_detail_body_showward_search{
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.header_adress_body_showprovince_search input,.header_adress_detail_body_showprovince_search input,.header_adress_detail_body_showdistrict_search input, .header_adress_detail_body_showward_search input{
+    width: 90%;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+}
+.header_adress_body_showprovince_search i,.header_adress_detail_body_showprovince_search i,.header_adress_detail_body_showdistrict_search i, .header_adress_detail_body_showward_search i{
+    width: 10%;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.header_adress_body_showprovince_list,.header_adress_detail_body_showprovince_list ,.header_adress_detail_body_showdistrict_list, .header_adress_detail_body_showward_list{
+    padding: 0;
+    margin: 12px;
+    list-style: none;
+    column-count: 2;
+}
+
+.header_adress_body_showprovince_link a,.header_adress_detail_body_showprovince_link a,.header_adress_detail_body_showdistrict_link a, .header_adress_detail_body_showward_link a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    line-height: 4.0rem;
+}
+.header_adress_body_input,.header_adress_detail_input_province,
+.header_adress_detail_input_district,
+.header_adress_detail_input_ward,.header_adress_detail_input_apartment_number{
     width: 100%;
     padding: 12px;
     height: 100%;
@@ -161,10 +245,16 @@
     justify-content: space-between;
     cursor: pointer;
 }
-.header_adress_body_input span{
+.header_adress_body_input span ,.header_adress_detail_input_province span,
+.header_adress_detail_input_district span,
+.header_adress_detail_input_ward span,.header_adress_detail_input_apartment_number{
     color: var(--text-color-first);
     font-size: 1.4rem;
     font-weight: 500;
+    outline: none;
+}
+.header_adress_detail_input_apartment_number{
+    cursor: auto;
 }
 .header_adress_body_input i {
     font-size: 1.4rem;
@@ -198,6 +288,16 @@
     outline: none;
 }
 
+.header_adress_detail{
+    margin-bottom: 24px;
+}
+.header_adress_detail_title{
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+/* end adress */
+/* header_search */
 .header_search{
     width: 222px;
     height: 30px;
@@ -467,7 +567,7 @@
 
 .group_item:hover{
     text-decoration: none;
-    box-shadow: 0px 0px 10px 4px rgb(196, 194, 194, 30%);
+    box-shadow: 0 2px 12px rgb(0 0 0 / 12%);
 }
 .installment{
     position: absolute;
@@ -545,6 +645,7 @@
 .group_item_price{
     font-size: 1.4rem;
     color: var(--text-color-first);
+    display: block;
 }
 .group_item_review{
     display: flex;
@@ -559,7 +660,9 @@
     margin-left: 5px;
     color: var(--text-color-first);
 }
-
+.group_item_number_overrate p {
+    font-size: 1.2rem;
+}
 /* carousel-content-item */
 .carousel-content-group{
     background-color: rgb(236, 233, 231);
@@ -653,7 +756,69 @@
     font-size: 3.0rem;
     color: var(--background-color);
 }
+.checkbox_chatbox:checked ~ .dialog_chat{
+    display: block;
+}
 
+.dialog_chat{
+    position: fixed;
+    width: 350px;
+    height: 500px;
+    bottom: 50px;
+    right: 50px;
+    z-index: 15;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    display: none;
+}
+.dialog_close{
+    width: 100%;
+    height: 40px;
+    background-color: var(--dialog_chat-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: block;
+}
+.icon_chatbox_close{
+    display: block;
+    float: right;
+}
+.icon_chatbox_close i{
+    color: var(--background-color);
+    float: right;
+    display: block;
+    padding: 12px;
+    cursor: pointer;
+    border:  1px solid var(--background-color);
+    margin: 4px 8px 0 0 ;
+}
+.dialog_body{
+    padding: 12px;
+    height: 460px;
+    border:  2px solid var(--dialog_chat-color);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+.form_body_dialogchat label{
+    font-size: 1.8rem;
+    display: block;
+}
+.dialog_body_select{
+    width: 100%;
+    font-size: 1.6rem;
+    outline: none;
+}
+.form_body_dialogchat input{
+    font-size: 1.6rem;
+}
+.form_body_dialogchat .invalid-feedback,.form_body_dialogchat .valid-feedback{
+    font-size: 1.4rem;
+}
+.form-check-input_body_dialogchat{
+    font-size: 1.6rem;
+}
 /* trade_mark-------- */
 .trademark,.newproduct{
     margin-top: 24px;
