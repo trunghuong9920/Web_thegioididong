@@ -48,19 +48,22 @@
         margin-right: 0;
     }
     .header_search-adress{
-        width: 60px;
-        padding: 4px 4px;
-        margin:0 8px;
+        width: 70px;
+        padding: 2px 0px;
+        margin: 4px 4px;
         border: none;
     }
     .header_adress_body-title h3{
-        font-size: 0.9rem;
+        font-size: 1.0rem;
     }
     .header_adress_form {
         width: 100%;
         left: 0;
         top: 20%;
         margin: 0;
+    }
+    .adress_icon_location{
+        display: block;
     }
     .header_adress_body-title{
         max-height: 3.6rem;
@@ -88,4 +91,11 @@
     }
 
 
+}
+
+/*Small phones from 0 to 480px*/
+@media only screen and (max-width:480px){
+    .hidden_on_mobile{
+        display: none;
+    }
 }

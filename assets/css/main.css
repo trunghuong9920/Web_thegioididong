@@ -62,7 +62,12 @@
     cursor: pointer;
     position: relative;
 }
-
+.adress_icon_location{
+    display: none;
+}
+.header_adress_body-title{
+    display: flex;
+}
 .header_adress_overlay{
     position: fixed;
     top: 0;
