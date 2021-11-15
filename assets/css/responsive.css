@@ -42,15 +42,19 @@
         font-size: 1.0rem;
     }
     .header_search-logo img{
-        width: 50px;
+        width: 40px;
+    }
+    .header_search-logo{
+        margin-right: 0;
     }
     .header_search-adress{
-        width: 70px;
-        padding: 4px 8px;
-        margin-left: 4px;
+        width: 60px;
+        padding: 4px 4px;
+        margin:0 8px;
+        border: none;
     }
     .header_adress_body-title h3{
-        font-size: 1.0rem;
+        font-size: 0.9rem;
     }
     .header_adress_form {
         width: 100%;
@@ -66,7 +70,7 @@
         -webkit-line-clamp: 3;
     }
     .header_search {
-        width: 111px;
+        width: 120px;
     }
     .header_cart{
         border: none;
