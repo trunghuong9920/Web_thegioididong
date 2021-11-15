@@ -352,9 +352,11 @@
     border: 1px solid rgb(160, 158, 158);
     border-radius: 4px;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
 }
 .header_cart i{
     font-size: 1.4rem;
+    -webkit-tap-highlight-color: transparent;
 }
 .header_cart span{
     font-size: 1.2rem;

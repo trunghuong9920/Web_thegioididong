@@ -224,7 +224,7 @@
     .clock_right_tab_list{
         margin-left: 12px;
     }
-    .tab_list_1_m:hover,.tab_list_2_m:hover,.tab_list_3_m:hover,.tab_list_4_m:hover{
+    .tab_list_1_m{
         background-color: var(--background-color);
     }
 }
