@@ -219,4 +219,8 @@
     .product_on_mobile_list{
         margin: 8px 0 0 4px;
     }
+    .product_on_mobile_link {
+        display: block;
+        margin: auto;
+    }
 }
