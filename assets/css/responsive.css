@@ -206,4 +206,17 @@
         font-size: 1.2rem;
     }
     /* end header----------- */
+    /* content: ; */
+    /* list_product_top */
+    .product_on_mobile_item {
+        padding: 7px 0px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        margin-bottom: 8px;
+        min-height: 30px;
+        min-width: 48px;
+    }
+    .product_on_mobile_list{
+        margin: 8px 0 0 4px;
+    }
 }
