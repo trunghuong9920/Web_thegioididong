@@ -447,6 +447,8 @@
     justify-content: space-between;
     border-radius: 4px;
     display: none;
+    animation: fadeScale ease .3s;
+    transform-origin: 10% top;
 }
 .header_navbar_acctive:hover .header_navbar_accessory{
     display: flex;
@@ -487,6 +489,8 @@
     justify-content: space-between;
     border-radius: 4px;
     display: none;
+    animation: fadeScale ease .3s;
+    transform-origin: 10% top;
 }
 .header_navbar_item_PC:hover .header_navbar_PC{
     display: flex;
@@ -770,6 +774,8 @@
     background-color: var(--background-color);
     border-radius: 8px;
     display: none;
+    animation: fadeScale ease .3s;
+    transform-origin: 90% bottom;
 }
 .dialog_close{
     width: 100%;
