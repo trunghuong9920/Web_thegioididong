@@ -71,6 +71,7 @@
         display: inline-block;
         font-size: 0.8rem;
     }
+
     .header_adress_body-title{
         max-height: 2.6rem;
         overflow: hidden;
@@ -84,7 +85,9 @@
     .header_cart{
         border: none;
         width: 0;
+        -webkit-tap-highlight-color: transparent;
     }
+   
     .menu_list_on_mobile{
         display: block;
     }
@@ -227,6 +230,13 @@
     .tab_list_1_m{
         background-color: var(--background-color);
     }
+
+    /* cart */
+    .delivery_address_detail_body_showward,.delivery_address_detail_body_showprovince,.delivery_address_detail_body_showdistrict{
+        left: 0;
+        width: 100%;
+        right: 0;
+    }
 }
 
 /*Small phones from 0 to 480px*/
@@ -238,7 +248,7 @@
         font-size: 0.9rem;
         padding: 2px;
         width: 50px;
-        margin-top: 10px;
+        padding-top: 6px;
         margin-left: 4px;
         border-left: 1px solid var(--border-item_header-color);
     }
@@ -313,5 +323,39 @@
     .clock_right_tab_list li {
         margin: 0 4px;
         max-width: 60px;
+    }
+    /* cart */
+    .product_header_img img{
+        width: 50px;
+        height: 50px;
+    }
+    .product_header_choosenumber .minus, .product_header_choosenumber .number_product, .product_header_choosenumber .plus{
+        padding: 2px 5px;
+    }
+    .top_content{
+        padding: 4px;
+    }
+    .top_content_left{
+        font-size: 1.0rem;
+    }
+    .product_header_item,.information_customer,.choosegetgoods{
+        padding: 10px 4px;
+    }
+    .anotheroption{
+        padding: 12px 4px;
+    }
+   
+    .choosegetgoods ,.anotheroption_item{
+        padding: 4px;
+    }
+    .total-product_provisional{
+        padding: 4px;
+    }
+    .anotheroption_item label{
+        margin-left: 4px;
+    }
+    .finaltotal{
+        padding-left: 4px;
+        padding-right: 4px;
     }
 }

@@ -514,7 +514,7 @@
             <div class="main_cart">
                 <div class="top_content">
                     <a href="#" class="top_content_left"><i class="fas fa-chevron-left"></i> Mua thêm sản phẩm khác</a>
-                    <div class="top_content_right">Giỏ hàng của anh</div>
+                    <div class="top_content_right hidden_on_mobile">Giỏ hàng của anh</div>
                 </div>
                 <div class="main_content">
                     <ul class="main_header_list">
@@ -600,20 +600,22 @@
                             <h4>CHỌN CÁCH THỨC NHẬN HÀNG</h4>
                             <form action="">
                                 <div class="click-choose">
-                                    <input type="radio" name="choose" id="choose-tab-1">
+                                    <input onchange="choosegetgoods_tab_1()" type="radio" checked name="choose" id="choose-tab-1">
                                     <label for="choose-tab-1">Giao tận nơi</label>
-                                    <input type="radio" name="choose" id="choose-tab-2">
+                                    <input onchange="choosegetgoods_tab_2()" type="radio" name="choose" id="choose-tab-2">
                                     <label for="choose-tab-2">Nhận tại siêu thị</label>
                                 </div>
+                                <input type="checkbox" hidden id="choose-tab-2_cb" class="choose-tab-2_cb">
                                 <div class="delivery_address">
-                                    <span class="delivery_address_notes">Chọn địa chỉ để biết thời gian nhận hàng và phí vận chuyển (nếu có)</span>
-                                    <ul class="delivery_address_detail">
+                                    <span class="delivery_address_notes" id="delivery_address_notes">Chọn địa chỉ để biết thời gian nhận hàng và phí vận chuyển (nếu có)</span>
+                                    <ul class="delivery_address_detail" id="delivery_address_detail">
                                         <li>
                                             <label for="checkbox_delivery_address_detail_input_province"
                                                 class="delivery_address_detail_input_province">
                                                 <span>Hồ Chí Minh</span>
                                                 <i class="fas fa-sort-down"></i>
                                             </label>
+                                            <input type="checkbox" hidden name="" id="checkbox_delivery_address_detail_input_province" class="checkbox_delivery_address_detail_input_province">
                                             <div class="delivery_address_detail_body_showprovince">
                                                 <div class="delivery_address_detail_body_showprovince_search">
                                                     <i class="fas fa-search"></i>
@@ -652,9 +654,10 @@
                                         <li>
                                             <label for="checkbox_delivery_address_detail_input_district"
                                                 class="delivery_address_detail_input_district">
-                                                <span>Hồ Chí Minh</span>
+                                                <span>Quận 1</span>
                                                 <i class="fas fa-sort-down"></i>
                                             </label>
+                                            <input type="checkbox" hidden name="" id="checkbox_delivery_address_detail_input_district" class="checkbox_delivery_address_detail_input_district">
                                             <div class="delivery_address_detail_body_showdistrict">
                                                 <div class="delivery_address_detail_body_showdistrict_search">
                                                     <i class="fas fa-search"></i>
@@ -662,7 +665,7 @@
                                                 </div>
                                                 <ul class="delivery_address_detail_body_showdistrict_list">
                                                     <li class="delivery_address_detail_body_showdistrict_link"><a
-                                                            href="#"><strong>Hà Nội</strong></a></li>
+                                                            href="#"><strong>Hà Nội 1</strong></a></li>
                                                     <li class="delivery_address_detail_body_showdistrict_link"><a href="#">Hà
                                                             Nội</a></li>
                                                     <li class="delivery_address_detail_body_showdistrict_link"><a href="#">Hà
@@ -696,6 +699,7 @@
                                                 <span>Hồ Chí Minh</span>
                                                 <i class="fas fa-sort-down"></i>
                                             </label>
+                                            <input type="checkbox"hidden id="checkbox_delivery_address_detail_input_ward" class="checkbox_delivery_address_detail_input_ward">
                                             <div class="delivery_address_detail_body_showward">
                                                 <div class="delivery_address_detail_body_showward_search">
                                                     <i class="fas fa-search"></i>
@@ -733,12 +737,92 @@
                                         </li>
                                         <li>
                                             <input type="text" class="delivery_address_detail_input_apartment_number"
-                                            placeholder="Nhập số nhà, tên đường (Không bắt buộc)"></li>
+                                            placeholder="Nhập số nhà, tên đường "></li>
                                     </ul>
+                                    <div class="delivery_address_detail_tab_2" id="delivery_address_detail_tab_2">
+                                        <ul class="delivery_address_detail_tab_2_list">
+                                            <li>
+                                                <input type="radio" id="link1" name="adress">
+                                                <label for="link1"> E6/8 Thới Hòa Xã Vĩnh Lộc A, Huyện Bình Chánh, TP. Hồ Chí Minh </label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="link2" name="adress">
+                                                <label for="link2"> E6/8 Thới Hòa Xã Vĩnh Lộc A, Huyện Bình Chánh, TP. Hồ Chí Minh </label>
+                                            </li>
+                                            <li>
+                                                <span class="show_all_delivery_address_detail_tab_2">Xem thêm 182 Địa chỉ</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="delivery_product">
+                                        <div class="delivery_product_header">
+                                            <span>Giao trước 12h ngày mai (17/11)</span>
+                                            <label for="checkbox_delivery_product_date_time">Chọn ngày giờ khác</label>
+                                        </div>
+                                        <input hidden type="checkbox" id="checkbox_delivery_product_date_time" class="checkbox_delivery_product_date_time">
+                                        <div class="delivery_product_select_date_time">
+                                            <select class="" name="" id="" >
+                                                <option value="Ngày mai 17/11" selected>Ngày mai 17/11</option>
+                                                <option value="Ngày kia 18/11">Ngày kia 18/11</option>
+                                                <option value="Ngày kia 19/11">Ngày kia 18/11</option>
+                                            </select>
+                                            <select class="" name="" id="" >
+                                                <option value="8h" selected>8h</option>
+                                                <option value="13h">13h</option>
+                                                <option value="19h">19h</option>
+                                            </select>
+                                        </div>
+                                        <div class="delivery_product_body">
+                                            <a href="">
+                                                <img src="./assets/images/cart_img.jpg" width="45px" height="45px" alt="Photos">
+                                            </a>
+                                            <div class="delivery_product_body_info">
+                                                <a href="">
+                                                    <h3>Pin sạc dự phòng không dây Polymer 10.000 mAh Type C PD QC3.0 Xmobile PowerLite P106WD</h3>
+                                                </a>
+                                                <span class="properties">
+                                                    <span>Màu: đen</span>
+                                                    <span>Số lượng: 1</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <span class="delivery_product_body_notes" id="delivery_product_body_notes">
+                                            Miễn phí giao hàng
+                                        </span>
+                                    </div>
                                 </div>
                             </form>
                         </li>
+                        <li>
+                            <div class="anotheroption">
+                                <form action="">
+                                    <ul class="anotheroption_list">
+                                        <li class="anotheroption_item">
+                                            <input type="text" placeholder="Yêu cầu khác (Không bắt buộc)" class="anotheroption_input">
+                                        </li>
+                                        <li class="anotheroption_item">
+                                            <input type="checkbox" class="anotheroption_checkbox" id="anotheroption_checkbox"">
+                                            <label for="anotheroption_checkbox"">Xuất hóa đơn công ty</label>
+
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </li>
+                        <li>
+                            <form action="" class="finaltotal">
+                                <div class="total">
+                                    <span class="total_label">Tổng tiền</span>
+                                    <span class="total_price">375,000đ</span>
+                                </div>
+                                <button type="button" class="submitorder">Đặt hàng</button>
+                            </form>
+                        </li>
                     </ul>
+                </div>
+                <div class="bottom_content">
+                    <p>Bằng cách đặt hàng, bạn đồng ý với Điều khoản sử dụng của Thegioididong</p>
                 </div>
             </div>
         </div>
