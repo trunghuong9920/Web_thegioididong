@@ -159,20 +159,20 @@
 .info_customer h4{
     margin-bottom: 12px;
 }
-.sex_customer{
+.sex_customer,.click-choose{
     display: flex;
     align-items: center;
 }
-.sex_customer label{
+.sex_customer label,.click-choose label{
     font-size: 1.4rem;
     font-weight: 400;
     margin-right: 12px;
     margin-left: 4px;
 }
-.sex_customer input{
+.sex_customer input,.click-choose input{
     font-size: 1.4rem;
 }
-.sex_customer label, .sex_customer input{
+.sex_customer label, .sex_customer input ,.click-choose input,.click-choose label{
     cursor: pointer;
 }
 .fill_form{
@@ -192,3 +192,55 @@
 }
 
 /* choosegetgoods */
+.choosegetgoods{
+    padding: 12px 30px 0 30px;
+}
+.delivery_address_notes{
+    font-size: 1.4rem;
+    color: var(--text-color-first);
+     
+}
+.delivery_address_detail{
+    padding: 0;
+    column-count: 2;
+    margin-top: 12px;
+    list-style: none;
+}
+.delivery_address{
+    padding: 12px;
+    display: block;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    margin-top: 12px;
+    position: relative;
+    border: 1px solid rgb(127, 125, 125);
+}
+.delivery_address::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 15px;
+    top: -8px;
+    left: 30px;
+    height: 15px;
+    background-color: #f0f0f0 ;
+    transform: rotate(-45deg);
+    border-top: 1px solid rgb(127, 125, 125);
+    border-right: 1px solid rgb(127, 125, 125);
+
+}
+.delivery_address_detail_body_showprovince,
+.delivery_address_detail_body_showdistrict,
+.delivery_address_detail_body_showward{
+    display: none;
+}
+
+.delivery_address_detail_input_province,
+.delivery_address_detail_input_district,
+.delivery_address_detail_input_ward,
+.delivery_address_detail_input_apartment_number{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
