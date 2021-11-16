@@ -344,9 +344,9 @@
 }
 .header_cart{
     width: 100px;
-    padding: 6px 8px;
+    padding: 4px 8px;
     margin: 0 12px;
-    display: block;
+    display: flex;
     text-decoration: none;
     color: white;
     border: 1px solid rgb(160, 158, 158);
@@ -358,9 +358,15 @@
     font-size: 1.4rem;
     -webkit-tap-highlight-color: transparent;
 }
+.header_cart .number{
+    background-color: rgb(248, 46, 46);
+    border-radius: 50%;
+    display: block;
+    padding: 0 6px  ;
+    margin-right: 12px;
+}
 .header_cart span{
     font-size: 1.2rem;
-    margin-left: 12px;
 }
 .header_cart:hover {
     text-decoration: none;
