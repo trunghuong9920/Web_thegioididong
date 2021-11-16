@@ -333,29 +333,29 @@
         padding: 2px 5px;
     }
     .top_content{
-        padding: 4px;
+        padding: 6px;
     }
     .top_content_left{
         font-size: 1.0rem;
     }
     .product_header_item,.information_customer,.choosegetgoods{
-        padding: 10px 4px;
+        padding: 10px 6px;
     }
     .anotheroption{
-        padding: 12px 4px;
+        padding: 12px 6px;
     }
    
     .choosegetgoods ,.anotheroption_item{
-        padding: 4px;
+        padding: 6px;
     }
     .total-product_provisional{
-        padding: 4px;
+        padding: 6px;
     }
     .anotheroption_item label{
-        margin-left: 4px;
+        margin-left: 6px;
     }
     .finaltotal{
-        padding-left: 4px;
-        padding-right: 4px;
+        padding-left: 6px;
+        padding-right: 6px;
     }
 }
