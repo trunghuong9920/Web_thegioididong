@@ -136,7 +136,12 @@
         margin-top: 20px;
         min-height: 120px;
     }
- 
+    .group_item-body{
+        padding: 12px 4px;
+    }
+    .item_txt_online{
+        font-size: 1.1rem;
+    }
     .content_group-title ul li{
         padding: 2px 4px;
         min-height: 22px;
