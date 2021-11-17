@@ -147,12 +147,7 @@
         margin-top: 0;
         font-size: 1.4rem;
     }
-    .ul_content_group_event_list{
-        display: flex;
-        list-style: none;
-        padding: 0;
-        overflow-x: scroll;
-    }
+    
     .content_group{
         margin-top: 12px;
         padding-top: 0;

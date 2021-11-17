@@ -70,7 +70,7 @@
 .header_adress_body-title{
     display: flex;
 }
-.header_adress_overlay{
+.screen_overlay{
     position: fixed;
     top: 0;
     left: 0;
@@ -83,7 +83,7 @@
     z-index: 10;
     display: none;
 }
-.header_adress_checkbox:checked ~ .header_adress_overlay{
+.header_adress_checkbox:checked ~ .screen_overlay{
     display: block;
 }
 
@@ -329,7 +329,7 @@
     display: none;
 }
 .show_on_mobile_flex{
-    display: flex;
+    display: none;
 }
 .header_search button{
     background-color: white;
@@ -662,7 +662,11 @@
 .content_group_event h1{
     margin-bottom: 22px;
 }
-
+.ul_scoll_item{
+    list-style: none;
+    padding: 0;
+    overflow-x: scroll;
+}
 
 .content{
     margin: 12px 0;
@@ -672,6 +676,7 @@
 }
 .content_group-title{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0  0 12px 0;
 }
@@ -927,6 +932,7 @@
     border-radius: 50%;
     box-shadow: 0 0 30px 10px rgb(196, 194, 194, 100%);
     cursor: pointer;
+    z-index: 12;
 }
 .chatbox i{
     font-size: 3.0rem;
