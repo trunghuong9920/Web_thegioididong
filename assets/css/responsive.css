@@ -87,7 +87,12 @@
         width: 0;
         -webkit-tap-highlight-color: transparent;
     }
-   
+    .header_cart-overlay{
+        display: none;
+    }
+    .header_cart:hover .header_cart-overlay{
+        display: none;
+    }
     .menu_list_on_mobile{
         display: block;
     }
