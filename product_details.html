@@ -32,8 +32,8 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/cart.css">
     <link rel="stylesheet" href="./assets/css/product_details.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/carousel_pddt.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <script src="./assets/js/carousel_pddt.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/cart.js"></script>
@@ -533,7 +533,7 @@
                         </ul>
                     </div>
                     <div class="pddt_body">
-                        <div class="pddt_title">
+                        <div class="hidden_on_mobile pddt_title">
                             <h3 class="pddt_title_name">Điện thoại iPhone 13 256GB</h3>
                             <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
                         </div>
@@ -586,10 +586,13 @@
                                             <script type="text/javascript">jssor_product_details();
                                             </script>
                                         </div>
+                                        <div class="show_on_mobile_flex pddt_title pddt_title_on_mobile">
+                                            <h3 class="pddt_title_name">Điện thoại iPhone 13 256GB</h3>
+                                        </div>
                                         <div class="policy">
                                             <input type="checkbox" hidden name="" id="cb_policy_item_show_detail" class="cb_policy_item_show_detail">
                                             <div class="policy_screen_overlay"></div>
-                                            <ul class="policy_list">
+                                            <ul class="policy_list hidden_on_mobile">
                                                 <li class="policy_item policy_item_border">
                                                     <i class="fas fa-box-open"></i>
                                                     <span class="policy_item_name">
@@ -614,10 +617,10 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="pddt_img-main">
+                                        <div class="pddt_img-main hidden_on_mobile">
                                             <img src="./assets/images/img_main.jpg" alt="Photos">
                                         </div>
-                                        <div class="pddt_content-main">
+                                        <div class="pddt_content-main hidden_on_mobile">
                                             <h2 class="pddt_content-title">Bài viết đánh giá</h2>
                                             <div class="pddt_content-body">
                                                 <h2>Apple thỏa mãn sự chờ đón của iFan và người dùng với sự ra mắt của iPhone 13. Dù ngoại hình không có nhiều thay đổi so với iPhone 12 nhưng với cấu hình mạnh mẽ hơn, đặc biệt pin “trâu” hơn và khả năng quay phim chụp ảnh cũng ấn tượng hơn, hứa hẹn mang đến những trải nghiệm thú vị trên phiên bản mới này.
@@ -633,7 +636,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="pddt_reviews">
+                                        <div class="hidden_on_mobile pddt_reviews">
                                             <div class="pddt_reviews-header">
                                                 <h2>Đánh giá Điện thoại iPhone 13 256GB</h2>
                                             </div>
@@ -968,6 +971,30 @@
                                             </ul>
                                             
                                         </div>
+                                        <ul class="policy_list show_on_mobile">
+                                            <li class="policy_item policy_item_border">
+                                                <i class="fas fa-box-open"></i>
+                                                <span class="policy_item_name">
+                                                    Hư gì đổi nấy <strong>12 tháng</strong> tại 2833 siêu thị toàn quốc (miễn phí tháng đầu)
+                                                    <label for="cb_policy_item_show_detail" class="policy_item_show_detail">Xem chi tiết</label>
+                                                </span>
+
+                                            </li>
+                                            <li class="policy_item policy_item_border">
+                                                <i class="fas fa-box-open"></i>
+                                                <span class="policy_item_name">
+                                                    Hư gì đổi nấy 12 tháng tại 2833 siêu thị toàn quốc (miễn phí tháng đầu)
+                                                    <span class="policy_item_show_detail">Xem chi tiết</span>
+                                                </span>
+                                            </li>
+                                            <li class="policy_item">
+                                                <i class="fas fa-box-open"></i>
+                                                <span class="policy_item_name">
+                                                    Hư gì đổi nấy 12 tháng tại 2833 siêu thị toàn quốc (miễn phí tháng đầu)
+                                                    <span class="policy_item_show_detail">Xem chi tiết</span>
+                                                </span>
+                                            </li>
+                                        </ul>
                                         <div class="configguration">
                                             <div class="config_header">
                                                 <h2>Cấu hình Điện thoại Samsung Galaxy Z Fold3 5G 512GB</h2>
@@ -999,12 +1026,173 @@
                                             <div class="pddt_show_all_config">
                                                 <span>Xem thêm cấu hình chi tiết <i class="fas fa-caret-right"></i></span>
                                             </div>
+                                            <div class="pddt_img-main show_on_mobile">
+                                                <img src="./assets/images/img_main.jpg" alt="Photos">
+                                            </div>
+                                            <div class="pddt_content-main show_on_mobile">
+                                                <h2 class="pddt_content-title">Bài viết đánh giá</h2>
+                                                <div class="pddt_content-body">
+                                                    <h2>Apple thỏa mãn sự chờ đón của iFan và người dùng với sự ra mắt của iPhone 13. Dù ngoại hình không có nhiều thay đổi so với iPhone 12 nhưng với cấu hình mạnh mẽ hơn, đặc biệt pin “trâu” hơn và khả năng quay phim chụp ảnh cũng ấn tượng hơn, hứa hẹn mang đến những trải nghiệm thú vị trên phiên bản mới này.
+                                                        Hiệu năng đột phá cùng bộ xử lý Apple A15 Bionic</h2>
+                                                    <br><p>Bộ vi xử lý Apple A15 mới gia tăng tốc độ CPU tới 50% và GPU đồ họa nhanh hơn 30% so với các đối thủ cạnh tranh trong cùng phân khúc, giúp iPhone 13 thể hiện sức mạnh khả năng xử lý ấn tượng hơn, mượt mà trên mọi tác vụ.</p>
+                                                    <img src="./assets/images/pddt_3.jpg" width="100%" height="auto" alt="Photos">
+                                                    <div class="bg-article">
+    
+                                                    </div>
+                                                    <div class="bg_show_pddt_content">
+                                                        <span>Xem thêm <i class="fas fa-caret-right"></i></span>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                            <div class="show_on_mobile pddt_reviews">
+                                                <div class="pddt_reviews-header">
+                                                    <h2>Đánh giá Điện thoại iPhone 13 256GB</h2>
+                                                </div>
+                                                <div class="pddt_reviews-body">
+                                                    <ul class="pddt_reviews-list">
+                                                        <li class="pddt_reviews-item">
+                                                            <div class="rating-star">
+                                                                <div class="rating-top">
+                                                                    <div class="rating-top-point">
+                                                                        4.4
+                                                                    </div>
+                                                                    <div class="rating-top-star">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="far fa-star"></i>
+                                                                    </div>
+                                                                    <a href="#">15 Đánh giá</a>
+                                                                </div>
+                                                                <div class="rating-bottom">
+                                                                    <ul class="rating-bottom-list">
+                                                                        <li class="rating-bottom-item">
+                                                                            <div class="rating-bottom-numberstar">
+                                                                                <span>5 <i class="fas fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="rating-progress">
+                                                                                <div class="progress">
+                                                                                    <div class="progress-bar" style="width:73%"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <a href="#">73%</a>
+                                                                        </li>
+                                                                        <li class="rating-bottom-item">
+                                                                            <div class="rating-bottom-numberstar">
+                                                                                <span>4 <i class="fas fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="rating-progress">
+                                                                                <div class="progress">
+                                                                                    <div class="progress-bar" style="width:7%"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                            <a href="#">7%</a>
+                                                                        </li>
+                                                                        <li class="rating-bottom-item">
+                                                                            <div class="rating-bottom-numberstar">
+                                                                                <span>3 <i class="fas fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="rating-progress">
+                                                                                <div class="progress">
+                                                                                    <div class="progress-bar" style="width:7%"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <a href="#">7%</a>
+                                                                        </li>
+                                                                        <li class="rating-bottom-item">
+                                                                            <div class="rating-bottom-numberstar">
+                                                                                <span>2 <i class="fas fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="rating-progress">
+                                                                                <div class="progress">
+                                                                                    <div class="progress-bar" style="width:13%"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <a href="#">13%</a>
+                                                                        </li>
+                                                                        <li class="rating-bottom-item">
+                                                                            <div class="rating-bottom-numberstar">
+                                                                                <span>1 <i class="fas fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="rating-progress">
+                                                                                <div class="progress">
+                                                                                    <div class="progress-bar" style="width:0%"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <a href="#">0%</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="pddt_reviews-item">
+                                                            <h4 class="pddt_reviews-item-name">Chánh</h4>
+                                                            <div class="pddt_reviews_item-review">
+                                                                <ul class="pddt_reviews-review_star">
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                </ul>
+                                                                <div class="pddt_reviews_item_share">
+                                                                    <i class="fas fa-heart"></i> Sẽ giới thiệu cho bạn bè, người thân
+                                                                </div>
+                                                            </div>
+                                                            <div class="pddt_reviews-item_comment">
+                                                                <span>Cho em hỏi: giá hoặc khuyến mãi không áp dụng trả góp 0% có nghĩ là ko lấy khuyến mãi vẫn được góp 0% với giá 26490.000₫ phải ko ạ</span>
+                                                            </div>
+                                                            <div class="pddt_reviews_item_footer">
+                                                                <div class="pddt_reviews_item_footer_like">
+                                                                    <i class="far fa-thumbs-up"></i> Hữu ích
+                                                                </div>
+                                                                <div class="pddt_reviews_item_footer_disscus">
+                                                                    <i class="fas fa-comment-dots"></i> Thảo luận
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="pddt_reviews-item">
+                                                            <h4 class="pddt_reviews-item-name">Chánh</h4>
+                                                            <div class="pddt_reviews_item-review">
+                                                                <ul class="pddt_reviews-review_star">
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                </ul>
+                                                                <div class="pddt_reviews_item_share">
+                                                                    <i class="fas fa-heart"></i> Sẽ giới thiệu cho bạn bè, người thân
+                                                                </div>
+                                                            </div>
+                                                            <div class="pddt_reviews-item_comment">
+                                                                <span>Cho em hỏi: giá hoặc khuyến mãi không áp dụng trả góp 0% có nghĩ là ko lấy khuyến mãi vẫn được góp 0% với giá 26490.000₫ phải ko ạ</span>
+                                                            </div>
+                                                            <div class="pddt_reviews_item_footer">
+                                                                <div class="pddt_reviews_item_footer_like">
+                                                                    <i class="far fa-thumbs-up"></i> Hữu ích
+                                                                </div>
+                                                                <div class="pddt_reviews_item_footer_disscus">
+                                                                    <i class="fas fa-comment-dots"></i> Thảo luận
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="pddt_reviews-footer">
+                                                    <button type="button" class="pddt_review_commit"><i class="fas fa-star"></i> Viết đánh giá</button>
+                                                    <button type="button" class="pddt_review_showall"><i class="fas fa-star"></i> Xem thêm 15 đánh giá</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="related">
-                                <div class="content_group-title">
+                                <div class="content_group-title content_group-title_on_mobile">
                                     <h1>PHỤ KIỆN ĐƯỢC MUA CÙNG</h1>
                                     <div class="related_item_show_all">
                                         <a href=#">Xem tất cả</a>
@@ -2894,7 +3082,7 @@
                             <div class="row">
                                 <div class="col l-7 c-12">
                                     <div class="box_bottom">
-                                        <div class="pddt_comment">
+                                        <div class="pddt_comment_top">
                                             <div class="pddt_comment_form_input">
                                                 <form class="form_comment" action="">
                                                     <textarea  class="input_comment" name="" id=""></textarea>
@@ -2929,6 +3117,101 @@
                                                 <input type="radio" id="rdo_new" name="sort_cmt">
                                                 <label for="rdo_new">Mới nhất</label>
                                             </div>
+                                        </div>
+                                        <div class="pddt_comment_bottom">
+                                            <ul class="pddt_list_comment">
+                                                <li class="pddt_list_comment_item">
+                                                    <div class="pddt_list_comment_item_info">
+                                                        <div class="pddt_list_comment_item_info_name">
+                                                            <span class="img">V</span>
+                                                            <span class="name">Huỳnh Ngọc Vĩnh</span>
+                                                        </div>
+                                                        <div class="pddt_list_comment_item_comment">
+                                                            <span>Mình muốn hủy giữ đơn hàng này để đặt giữ đơn hàng khác ạ</span>
+                                                        </div>
+                                                        <div class="pddt_list_comment_item_bottom">
+                                                            <label for="comment_1" class="btn_rep">Trả lời</label>
+                                                            <span class="date">- 1 ngày trước</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pddt_list_comment_item_boxrep">
+                                                        <div class="pddt_list_comment_item_boxrep_header">
+                                                            <img src="./assets/images/logo_mobile.png" width="23px" height="23px" alt="Avata">
+                                                            <span class="name">Huỳnh Tấn Phong</span>
+                                                            <span class="admin">Quản trị viên</span>
+                                                        </div>
+                                                        <div class="pddt_list_comment_item_boxrep_body">
+                                                            <span>Dạ bên em nhận tin và sẽ có nhân viên liên hệ lại trong 30 phút ạ
+                                                                Thông tin đến anh.</span>
+                                                        </div>
+                                                        <div class="pddt_list_comment_item_boxrep_bottom">
+                                                            <span class="rep">Trả lời</span> - 
+                                                            <span class="like"><i class="fas fa-thumbs-up"></i> Hài lòng</span> - 
+                                                            <span class="dislike"><i class="fas fa-thumbs-down"></i> Không hài lòng</span> - 
+                                                            <span class="date">1 ngày trước</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </li>
+                                                <li class="pddt_list_comment_item">
+                                                    <div class="pddt_list_comment_item_info">
+                                                        <div class="pddt_list_comment_item_info_name">
+                                                            <span class="img">V</span>
+                                                            <span class="name">Huỳnh Ngọc Vĩnh</span>
+                                                        </div>
+                                                        <div class="pddt_list_comment_item_comment">
+                                                            <span>Ad oi Dt mh oppo f9 tự dưng không tai game trong CH PLAY dc. Nó để là có ứng dụng ngăn chặn màn hình Google play hãy tắt. Làm sao để tắt dc. Mh k biết ứng dụng nào ngăn chặn cả
+                                                            </span>
+                                                        </div>
+                                                        <div class="pddt_list_comment_item_bottom">
+                                                            <span class="btn_rep">Trả lời</span>
+                                                            <span class="date"> - 1 ngày trước</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pddt_list_comment_item_boxrep">
+                                                        <div class="pddt_list_comment_item_boxrep_header">
+                                                            <img src="./assets/images/logo_mobile.png" width="23px" height="23px" alt="Avata">
+                                                            <span class="name">Huỳnh Tấn Phong</span>
+                                                            <span class="admin">Quản trị viên</span>
+                                                        </div>
+                                                        <div class="pddt_list_comment_item_boxrep_body">
+                                                            <span>Dạ bên em nhận tin và sẽ có nhân viên liên hệ lại trong 30 phút ạ
+                                                                Thông tin đến anh.</span>
+                                                        </div>
+                                                        <div class="pddt_list_comment_item_boxrep_bottom">
+                                                            <span class="rep">Trả lời</span> - 
+                                                            <span class="like"><i class="fas fa-thumbs-up"></i> Hài lòng</span> - 
+                                                            <span class="dislike"><i class="fas fa-thumbs-down"></i> Không hài lòng</span> - 
+                                                            <span class="date">1 ngày trước</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="pagination_box_comment">
+                                            <ul class="pagination_box_comment_list">
+                                                <li class="pagination_box_comment_item">
+                                                    <a href="#" class="pagination_box_comment_link">1</a>
+                                                </li>
+                                                <li class="pagination_box_comment_item">
+                                                    <a href="#" class="pagination_box_comment_link">2</a>
+                                                </li>
+                                                <li class="pagination_box_comment_item">
+                                                    <a href="#" class="pagination_box_comment_link">3</a>
+                                                </li>
+                                                <li class="pagination_box_comment_item">
+                                                    <a href="#" class="pagination_box_comment_link">4</a>
+                                                </li>
+                                                <li class="pagination_box_comment_item">
+                                                    <a href="#" class="pagination_box_comment_link">...</a>
+                                                </li>
+                                                <li class="pagination_box_comment_item">
+                                                    <a href="#" class="pagination_box_comment_link">12</a>
+                                                </li>
+                                                <li class="pagination_box_comment_item">
+                                                    <a href="#" class="pagination_box_comment_link">>></a>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
