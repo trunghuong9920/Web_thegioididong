@@ -423,6 +423,9 @@
     .pddt_price_online_label{
         height: 36px;
     }
+    .pddt_price_online_label h3{
+        font-size: 1.2rem;
+    }
     .content_group-title_on_mobile{
         display: flex;
     }
@@ -441,8 +444,12 @@
     }
     .pddt_review_commit,.pddt_review_showall{
         padding-top: 4px;
+        height: 50px;
     }
     .content-active_main, .content_active_list{
         width: 100%;
+    }
+    .content-active_body_content{
+        width: 90%;
     }
 }
