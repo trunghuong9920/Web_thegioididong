@@ -439,5 +439,10 @@
     .pddt_list_comment_item_bottom  {
         display: block;
     }
-    
+    .pddt_review_commit,.pddt_review_showall{
+        padding-top: 4px;
+    }
+    .content-active_main, .content_active_list{
+        width: 100%;
+    }
 }

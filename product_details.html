@@ -37,6 +37,7 @@
     <script src="./assets/js/carousel_pddt.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/cart.js"></script>
+    <script src="./assets/js/product_detail.js"></script>
 
 </head>
 
@@ -92,7 +93,7 @@
                                 </div>
                             </label>
                             <input type="checkbox" hidden id="header_adress_checkbox" class="header_adress_checkbox">
-                            <div class="screen_overlay">
+                            <div class="screen_overlay" id="screen_overlay">
 
                             </div>
                             <form action="#" class="header_adress_form">
@@ -631,7 +632,7 @@
 
                                                 </div>
                                                 <div class="bg_show_pddt_content">
-                                                    <span>Xem thêm <i class="fas fa-caret-right"></i></span>
+                                                    <a onclick="show_content_active()" href="#show_content_active_reviewarticle">Xem thêm <i class="fas fa-caret-right"></i></a>
                                                 </div>
                                             </div>
 
@@ -774,8 +775,8 @@
                                                 </ul>
                                             </div>
                                             <div class="pddt_reviews-footer">
-                                                <button type="button" class="pddt_review_commit"><i class="fas fa-star"></i> Viết đánh giá</button>
-                                                <button type="button" class="pddt_review_showall"><i class="fas fa-star"></i> Xem thêm 15 đánh giá</button>
+                                                <a href="#"  class="pddt_review_commit"><i class="fas fa-star"></i> Viết đánh giá</a>
+                                                <a href="#" class="pddt_review_showall"><i class="fas fa-star"></i> Xem thêm 15 đánh giá</a>
                                             </div>
                                         </div>
                                         
@@ -1024,7 +1025,7 @@
                                                 </ul>
                                             </div>
                                             <div class="pddt_show_all_config">
-                                                <span>Xem thêm cấu hình chi tiết <i class="fas fa-caret-right"></i></span>
+                                                <a onclick="pddt_show_all_config()" href="#">Xem thêm cấu hình chi tiết <i class="fas fa-caret-right"></i></a>
                                             </div>
                                             <div class="pddt_img-main show_on_mobile">
                                                 <img src="./assets/images/img_main.jpg" alt="Photos">
@@ -1039,8 +1040,8 @@
                                                     <div class="bg-article">
     
                                                     </div>
-                                                    <div class="bg_show_pddt_content">
-                                                        <span>Xem thêm <i class="fas fa-caret-right"></i></span>
+                                                    <div onclick="show_content_active()" class="bg_show_pddt_content">
+                                                        <a href="#">Xem thêm <i class="fas fa-caret-right"></i></a>
                                                     </div>
                                                 </div>
     
@@ -1198,7 +1199,7 @@
                                         <a href=#">Xem tất cả</a>
                                     </div>
                                 </div>
-                                <div class="hidden_on_mobile row row_main_content content_group-body">
+                                <div class="hidden_on_mobile row row_main_content sm-gutter content_group-body">
                                     <div class="col col_main_content l-2-4 c-4">
                                         <a href="product_details.html" class="group_item">
                                             <span class="installment">Trả góp 0%</span>
@@ -3214,6 +3215,58 @@
                                             </ul>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="content-active" id="content-active">
+                                <div class="content-active_main">
+                                    <div class="content-active_header">
+                                        <ul class="content_active_list">
+                                            <li onclick="show_content_active_config()" id="show_content_active_config" class="content_active_item">
+                                                <Span>Thông số kỹ thuật</Span>
+                                            </li>
+                                            <li onclick="show_content_active_reviewarticle()" id="show_content_active_reviewarticle" class="content_active_item ">
+                                                <Span>Bài viết đánh giá</Span>
+                                            </li>
+                                            <li onclick="show_content_active_highlight_point()" id="show_content_active_highlight_point()" class="content_active_item ">
+                                                <Span>Điểm nổi bật</Span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="content-active_body">
+                                        <div class="content-active_body_content" id="content-active_body_content_active_config">
+                                            <span>Thông số kỹ thuật</span>
+                                        </div>
+                                        <div class="content-active_body_content" id="content-active_body_content_reviewarticle">
+                                            <span>Thiết kế cải tiến hướng đến sự hoàn thiện
+                                                Samsung Galaxy Z Fold 2 vẫn giữ nguyên cơ chế màn hình gập ở thế hệ tiền nhiệm. Như một quyển sách, chiếc điện thoại mở ra để hiển thị màn hình lớn bên trong. Bên ngoài là một màn hình phụ tràn viền với thiết kế đục lỗ. 
+                                                
+                                                Màn hình gập cao cấp nhất | Galaxy Z Fold 2
+                                                
+                                                Những chất liệu cao cấp nhất đã được Samsung ưu ái trang bị lên Galaxy Z Fold 2, khung máy được làm từ nhôm, vuông vức hơn, giúp cho siêu phẩm màn hình gập mới của Samsung có một diện mạo nam tính và sang trọng hơn.
+                                                
+                                                Thiết kế cải tiến, sang trọng hơn | Galaxy Z Fold 2
+                                                
+                                                Mặt lưng của thiết bị được hoàn thiện từ kính cao cấp, có độ bóng mờ giúp giảm để lại dấu vân tay. Bên cạnh màu đen truyền thống, màu vàng đồng - gam màu mới lần đầu được Samsung giới thiệu trên Galaxy Z Fold 2 cũng rất ấn tượng.
+                                                
+                                                Gam màu vàng đồng mới ấn tượng | Galaxy Z Fold 2
+                                                
+                                                Đáng chú ý là phần bản lề trên Galaxy Z Fold 2 đã được Samsung cải tiến giúp cho thao tác gập mở máy trở nên sắc sảo. Giờ đây người dùng có thể mở và sử dụng máy linh hoạt ở nhiều góc độ khác nhau tương tự như mẫu smartphone Samsung Galaxy Z Flip.
+                                                
+                                                Với độ mỏng chỉ 6.9 mm khi mở ra, gập lại thì máy lại càng gọn gàng hơn, giúp cho việc sử dụng bằng 1 tay trên màn hình phụ trở nên tối ưu hơn.
+                                                
+                                                Thuận tiện cho sử dụng một tay | Galaxy Z Fold 2
+                                                
+                                                Cạnh dưới của máy là loa ngoài, mic thoại và một cổng sạc. Thật đáng tiếc khi Samsung tiếp tục loại bỏ jack 3.5 mm trên những mẫu điện thoại cao cấp của mình.
+                                                
+                                                Màn hình lớn và bền hơn thế hệ cũ
+                                                Màn hình phụ của Galaxy Z Fold 2 với thiết kế tràn viền Infinity-O, dùng camera đục lỗ trong màn hình giúp cho kích thước được mở rộng lên đến 6.23 inch, cho phép hiển thông tin nhiều hơn. Giờ đây bạn có thể sử dụng đầy đủ các tính năng như một màn hình độc lập, mà không bị giới hạn như thế hệ trước.
+                                                
+                                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div onclick="content_active_close()" class="content_active_close">
+                                    <span>X Đóng</span>
                                 </div>
                             </div>
                         </div>
